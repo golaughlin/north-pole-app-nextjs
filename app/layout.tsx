@@ -41,7 +41,7 @@ export default function RootLayout({
                   <Link href="/">Home</Link>
                 </li>
                 <li className="text-lg text-black dark:text-zinc-50 hover:underline">
-                  <Link href="/">Children List</Link>
+                  <Link href="/children">Children List</Link>
                 </li>
               </ul>
             </nav>
