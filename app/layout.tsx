@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,26 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex flex-col min-h-screen items-start justify-between bg-zinc-50 font-sans dark:bg-black">
+          <header className="flex items-center justify-start gap-x-8 min-w-screen max-w-3xl px-16 py-4 border-b border-zinc-950 dark:border-zinc-50">
+            <div className="flex items-center justify-start text-start">
+              <span className="font-medium text-xl text-black dark:text-zinc-50">
+                NorthPoleApp
+              </span>
+            </div>
+            <nav>
+              <ul className="list-none flex items-center justify-start gap-x-4">
+                <li className="text-lg text-black dark:text-zinc-50 hover:underline">
+                  <Link href="/">Home</Link>
+                </li>
+                <li className="text-lg text-black dark:text-zinc-50 hover:underline">
+                  <Link href="/">Children List</Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          {children}
+        </div>
       </body>
     </html>
   );
