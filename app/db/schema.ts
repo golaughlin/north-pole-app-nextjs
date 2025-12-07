@@ -1,8 +1,8 @@
 import "dotenv/config";
 import { sql } from "drizzle-orm";
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { drizzle } from "drizzle-orm/better-sqlite3";
-import { seed } from "drizzle-seed";
+//import { drizzle } from "drizzle-orm/better-sqlite3";
+//import { seed } from "drizzle-seed";
 
 // Create children table
 export const children = sqliteTable("children", {
@@ -17,7 +17,7 @@ export const children = sqliteTable("children", {
 });
 
 // Seed children table with example children
-async function generateChildren() {
+/*async function generateChildren() {
   const db = drizzle(process.env.DB_FILE_NAME!);
   await seed(db, { children }).refine((f) => ({
     children: {
@@ -33,4 +33,4 @@ async function generateChildren() {
   }));
 }
 
-generateChildren();
+generateChildren();*/
